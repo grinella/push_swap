@@ -6,19 +6,19 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 12:27:28 by grinella          #+#    #+#             */
-/*   Updated: 2023/09/22 13:49:52 by grinella         ###   ########.fr       */
+/*   Updated: 2023/09/25 17:04:30 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
+// if (index == 0)
+// return ;
 void	sposta_in_cima(long *pila, int *size, int index, char n)
 {
 	int	i;
 
-	if (index == 0)
-		return ;
-	if (index > size[0] / 2)
+	if ((index > size[0] / 2) && index != 0)
 	{
 		i = size[0] - index;
 		while (i-- > 0)
@@ -40,6 +40,7 @@ void	sposta_in_cima(long *pila, int *size, int index, char n)
 				rb(pila, size[0]);
 		}
 	}
+	return ;
 }
 
 void	sposta_in_coda(long *pila, int *size, int index, char n)
